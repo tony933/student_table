@@ -72,7 +72,7 @@ li a:hover:not(.active) {
     .img {
         position: absolute;
         right: 10px;
-        top: 150px;
+        top: 50px;
         z-index: -1;
         height: 600px;
         width: 600px;
