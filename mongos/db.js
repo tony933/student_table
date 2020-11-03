@@ -7,8 +7,8 @@ const user_schama = {
     age: { type: String, require: true },
     dep: { type: String, require: true },
     sta: { type: String, require: true },
-    mat: { type: String, require: true }
-
+    mat: { type: String, require: true },
+    nam: { type: Number, require: true }
 }
 var USER = mongo.model('USER', user_schama);
 module.exports = USER;

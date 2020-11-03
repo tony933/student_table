@@ -12,6 +12,19 @@ rout.get('/table', (req, res) => {
         }
     })
 });
+
+rout.get('/dash', (req, res) => {
+    USER.find((err, dates) => {
+
+        if (err)
+            console.log('it is err')
+        else {
+            res.render('index3.ejs', { dates: dates });
+
+        }
+    })
+});
+
 rout.get("/", (req, res) => {
     res.render('index.ejs');
 
@@ -22,7 +35,8 @@ rout.post('/', (req, res) => {
         age: req.body.age,
         dep: req.body.dep,
         sta: req.body.sta,
-        mat: req.body.mat
+        mat: req.body.mat,
+        nam: req.body.nam
 
 
     })

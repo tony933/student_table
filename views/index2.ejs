@@ -5,44 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/css/app.css">
+
 </head>
 
-<body>
-    <table border="1" cellpadding="50px">
-        <tr>
-            <th>Name <br> ID</th>
-            <th>age</th>
-            <th> Department </th>
-            <th>stage</th>
-            <th> material </th>
-        </tr>
-        <% dates.forEach((data)=>{ %>
+<body class="disply">
+    <%- include("navebare.ejs") %>
 
+        <table class="table">
             <tr>
-
-                <td>
-                    <%= data.firstName%>
-                </td>
-                <td>
-                    <%= data.age%>
-                </td>
-                <td>
-                    <%= data.dep%>
-                </td>
-                <td>
-                    <%= data.sta%>
-                </td>
-                <td>
-                    <%= data.mat%>
-                </td>
-
-
-
+                <th>Name </th>
+                <th>age</th>
+                <th> Department </th>
+                <th>stage</th>
+                <th> material </th>
+                <th>Degree</th>
+                <th>Result</th>
 
             </tr>
-            <%  });%>
+            <% dates.forEach((data)=>{ %>
 
-    </table>
+                <tr>
+
+                    <td>
+                        <%= data.firstName%>
+                    </td>
+                    <td>
+                        <%= data.age%>
+                    </td>
+                    <td>
+                        <%= data.dep%>
+                    </td>
+                    <td>
+                        <%= data.sta%>
+                    </td>
+                    <td>
+                        <%= data.mat%>
+                    </td>
+                    <td>
+                        <%= data.nam%>
+                    </td>
+                    <td>
+                        <% if (data.nam<50) { %>
+                            <p>faill</p>
+                            <% } else if(data.nam>=50) { %>
+                                <p>sucsess</p>
+                                <% } %>
+                    </td>
+
+                    <%  });%>
+
+        </table>
 
 </body>
 

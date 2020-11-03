@@ -5,23 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="/css/app.css">
 </head>
 
-<body>
-    <form action="/student/" method="POST">
-        <label> FirstName </label>
-        <input type="text" name="firs">
-        <label> age </label>
-        <input type="text" name="age">
-        <label> Department </label>
-        <input type="text" name="dep">
-        <label> stage </label>
-        <input type="text" name="sta">
-        <label> material </label>
-        <input type="text" name="mat">
-        <button type="submit">insert</button>
+<body class="home">
+    <%- include("navebare.ejs") %>
 
-    </form>
+        <form action="/student/" method="POST">
+            <label class="lab"> FirstName </label>
+            <input type="text" name="firs" class="input">
+            <label class="lab"> age </label>
+            <input type="text" name="age" class="input">
+            <label class="lab"> Department </label>
+            <input type="text" name="dep" class="input">
+            <label class="lab"> stage </label>
+            <input type="text" name="sta" class="input">
+            <label class="lab"> material </label>
+            <input type="text" name="mat" class="input">
+            <label class="lab"> degre</label>
+            <input type="number" name="nam" class="input">
+            <button type="submit" class="btn">insert</button>
+            <img src="/image/ej1.png" class="img">
+
+        </form>
 
 
 </body>

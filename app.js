@@ -4,7 +4,10 @@ const express = require('express'),
     port = 9000;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
+app.use(express.static(__dirname + '/public'));
+
 app.use(bodyParser.urlencoded({ extended: true }));
+
 
 // roting
 app.use('/student', require('./rotes/rote'))
